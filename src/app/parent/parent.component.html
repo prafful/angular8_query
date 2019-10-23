@@ -1,0 +1,7 @@
+
+<p>Parent Component:</p>
+Framework: {{framework}}
+<hr>
+Child Component:
+<br>
+<app-child [sendtochild]="framework" (broadcastNewFramework)="frameworkUpdated($event)"></app-child>

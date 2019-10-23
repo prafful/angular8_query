@@ -1,0 +1,16 @@
+<p>child works!</p>
+Framework (received from parent): {{sendtochild}}
+
+<br>
+New framework: 
+<input type="text" [(ngModel)]="sendtochild" autofocus>
+<br>
+New framework: {{sendtochild}}
+<br>
+<button (click)="updateFramework()">Send</button>
+<hr>
+<div #mypara1>
+    Playing with @ViewChild
+</div>
+
+

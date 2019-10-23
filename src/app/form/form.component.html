@@ -1,0 +1,29 @@
+<p>form works!</p>
+<h3>Template Form</h3>
+
+<form #scoreForm="ngForm">
+    Name: 
+    <input type="text" name="fullname" [(ngModel)]="fname">{{fname}}
+    <br>
+    Score:
+    <input type="number" name="myscore" [(ngModel)]="score" >{{score}}
+    <br>
+    <button (click)="addData(scoreForm)">Add</button>
+</form>
+
+<hr>
+
+<h3>Reactive Form</h3>
+<form [formGroup]="reactiveScoreForm">
+    Name: 
+    <input type="text" formControlName="fname" >
+    <br>
+    Score:
+    <input type="number" formControlName="score" >
+    <br>
+    <button 
+        (click)="addReactiveData(reactiveScoreForm)"
+        [disabled]="reactiveScoreForm.invalid">
+        Add
+    </button>
+</form>
